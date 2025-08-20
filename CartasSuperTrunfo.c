@@ -16,6 +16,8 @@ int main() {
     float areaCidade1;
     float pib1;
     int totalNumTurismo1;
+    float densidadePopulacao1;
+    float pibPerCapita1;
 
     // Carta 2
     char estado2[2];
@@ -25,7 +27,9 @@ int main() {
     float areaCidade2;
     float pib2;
     int totalNumTurismo2;
-
+    float densidadePopulacao2;
+    float pibPerCapita2;
+    
     // ======= CARTA 1 =======
     printf("====== CADASTRE A CARTA 1 ======\n");
     printf("Estado (Digite uma letra de A a H): ");
@@ -90,6 +94,18 @@ int main() {
     printf("Área: %.2f km²\n", areaCidade2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", totalNumTurismo2);
+
+    densidadePopulacao1 = areaCidade1 / (float)totalPopulacao1;
+    pibPerCapita1 = pib1 / totalPopulacao1;
+    printf("\n=== DADOS DE %s ===\n", nomeCidade1);
+    printf("Densidade populacional: %.2f\n", densidadePopulacao1);
+    printf("PIB per capita: %.2f", pibPerCapita1);
+
+    densidadePopulacao2 = areaCidade2 / (float)totalPopulacao2;
+    pibPerCapita2 = pib2 / totalPopulacao2;
+    printf("\n\n=== DADOS DE %s ===\n", nomeCidade2);
+    printf("Densidade populacional: %.2f\n", densidadePopulacao2);
+    printf("PIB per capita: %.2f", pibPerCapita2);
 
     return 0;
 }
